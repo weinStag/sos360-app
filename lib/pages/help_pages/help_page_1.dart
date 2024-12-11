@@ -27,7 +27,6 @@ class HelpPage1 extends StatelessWidget {
             ),
             OptionCard(
               option: "SAMU",
-              color: Colors.white,
               icon: "assets/ambulance.png"
             ),
             Text(

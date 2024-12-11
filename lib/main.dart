@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sos360_app/pages/start_page.dart';
+import 'package:sos360_app/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const StartPage(),
+      home: LoginPage(),
     );
   }
 }

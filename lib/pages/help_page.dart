@@ -53,7 +53,7 @@ class _HelpPageState extends State<HelpPage> {
                   ),
                 ),
                 SmoothPageIndicator(
-                  controller: _controller, 
+                  controller: _controller,
                   count: 3,
                   effect: const ExpandingDotsEffect(
                     activeDotColor: Colors.blue,

@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 
 class OptionCard extends StatelessWidget {
   final String option;
-  final color;
   final icon;
 
   const OptionCard({
     super.key,
     required this.option,
-    required this.color,
     required this.icon,
   });
 

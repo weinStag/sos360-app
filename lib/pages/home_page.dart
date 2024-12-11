@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sos360_app/components/option_card.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:sos360_app/pages/call_service_page.dart';
+import 'package:sos360_app/pages/help_page.dart';
+import 'package:sos360_app/pages/settings_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,144 +12,65 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
-  var selectedBarItemIndex = 0;
+  var selectedBarIndex = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red.shade700,
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selectedBarItemIndex,
-        onTap: (newIndex) {
-          setState(() {
-            selectedBarItemIndex = newIndex;
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home, size: 30), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.settings, size: 30), label: "Config."),
-        ],
-      ),
-      body: SafeArea(
-        child: Column(
-          children: [
-              Padding(
-                padding: const EdgeInsets.all(25.0),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.account_circle,
-                              size: 45,
-                              color: Colors.white,
-                            ),
-                            Text(
-                              " João Pedro",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 35,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
-                          ],
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.red.shade900,
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                          padding: EdgeInsets.all(5.0),
-                          child: Icon(
-                            Icons.notifications,
-                            size: 40,
-                            color: Colors.white,
-                          )
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 40,
-                    ),
-                  ],
+      backgroundColor: Colors.white,
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.2),
+                spreadRadius: 2,
+                blurRadius: 5,
+                offset: const Offset(0, 0)
+              ),
+            ],
+            borderRadius: BorderRadius.circular(30),
+            color: Colors.white,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            child: GNav(
+              backgroundColor: Colors.transparent,
+              color: Colors.black45,
+              iconSize: 30,
+              tabBackgroundColor: Colors.blue.shade300,
+              padding: const EdgeInsets.all(10),
+              gap: 10,
+              selectedIndex: selectedBarIndex,
+              onTabChange: (newIndex) {
+                setState(() {
+                  selectedBarIndex = newIndex;
+                });
+              }, 
+              tabs: const [
+                GButton(
+                  icon: Icons.settings,
+                  text: "Opções",
                 ),
+                GButton(
+                  icon: Icons.phone,
+                  text: "Chamar",
+                ),
+                GButton(
+                  icon: Icons.help_outline,
+                  text: "Ajuda",
+                ),
+              ]
             ),
-            Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(40),
-                    topRight: Radius.circular(40),
-                  ),
-                ),
-                padding: const EdgeInsets.all(30.0),
-                child: Center(
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Novo chamado: ",
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 5.0,
-                              vertical: 5.0
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.grey.shade200,
-                              borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                            ),
-                            child: Icon(
-                              Icons.info_outline,
-                              size: 40,
-                              ),
-                            ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 40,
-                      ),
-                      // ListView(
-                      //   children: [
-                          OptionCard(
-                            option: "Polícia",
-                            color: Colors.blue.shade900,
-                          ),
-                          SizedBox(
-                            height: 30,
-                          ),
-                          OptionCard(
-                            option: "Bombeiros",
-                            color: Colors.red,
-                          ),
-                          SizedBox(
-                            height: 30,
-                          ),
-                          OptionCard(
-                            option: "SAMU",
-                            color: Colors.white,
-                          ),
-                        // ],
-                      // )
-                    ],
-                  ),
-                ),
-              )
-            ),
-          ],
-        )
-      ),
+          ),
+        ),
+      ),        
+      body: switch (selectedBarIndex) {
+        0 => const SettingsPage(),
+        2 => const HelpPage(),
+        int() => const CallServicePage(),
+      }
     );
   }
 }
