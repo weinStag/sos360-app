@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sos360_app/components/my_button.dart';
 import 'package:sos360_app/components/my_text_field.dart';
-import 'package:sos360_app/pages/home_page.dart';
+import 'package:sos360_app/screens/home_page.dart';
 
 class SignupPage extends StatelessWidget {
   SignupPage({super.key});

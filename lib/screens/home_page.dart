@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:sos360_app/pages/call_service_page.dart';
-import 'package:sos360_app/pages/help_page.dart';
-import 'package:sos360_app/pages/settings_page.dart';
+import 'package:sos360_app/screens/emergency_call/call_service_page.dart';
+import 'package:sos360_app/screens/help/help_page.dart';
+import 'package:sos360_app/screens/settings_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

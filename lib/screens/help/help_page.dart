@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:sos360_app/pages/help_pages/help_page_1.dart';
-import 'package:sos360_app/pages/help_pages/help_page_2.dart';
-import 'package:sos360_app/pages/help_pages/help_page_3.dart';
+import 'package:sos360_app/screens/help/help_page_1.dart';
+import 'package:sos360_app/screens/help/help_page_2.dart';
+import 'package:sos360_app/screens/help/help_page_3.dart';
 
 class HelpPage extends StatefulWidget {
   const HelpPage({super.key});

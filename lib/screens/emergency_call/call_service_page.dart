@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:sos360_app/components/option_card.dart';
-import 'package:sos360_app/pages/notifications_page.dart';
-import 'package:sos360_app/pages/service_pages/firemen_service_page.dart';
-import 'package:sos360_app/pages/service_pages/police_service_page.dart';
-import 'package:sos360_app/pages/service_pages/samu_service_page.dart';
+import 'package:sos360_app/screens/notifications_page.dart';
+import 'package:sos360_app/screens/emergency_call/firemen_service_page.dart';
+import 'package:sos360_app/screens/emergency_call/police_service_page.dart';
+import 'package:sos360_app/screens/emergency_call/samu_service_page.dart';
 
 class CallServicePage extends StatelessWidget {
   const CallServicePage({super.key});

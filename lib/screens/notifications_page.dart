@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sos360_app/pages/service_pages/call_info.dart';
+import 'package:sos360_app/screens/emergency_call/call_info.dart';
 
 class NotificationsPage extends StatelessWidget {
   const NotificationsPage({super.key});

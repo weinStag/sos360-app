@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sos360_app/components/my_button.dart';
 import 'package:sos360_app/components/my_text_field.dart';
-import 'package:sos360_app/pages/home_page.dart';
-import 'package:sos360_app/pages/recover_password_page.dart';
-import 'package:sos360_app/pages/signup_page.dart';
+import 'package:sos360_app/screens/home_page.dart';
+import 'package:sos360_app/screens/auth/recover_password_page.dart';
+import 'package:sos360_app/screens/auth/signup_page.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});

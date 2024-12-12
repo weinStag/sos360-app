@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sos360_app/pages/login_page.dart';
+import 'package:sos360_app/screens/auth/login_page.dart';
 
 void main() {
   runApp(const MyApp());

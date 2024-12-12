@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:linear_progress_bar/linear_progress_bar.dart';
 import 'package:sos360_app/components/option_card.dart';
-import 'package:sos360_app/pages/call_confirmation_page.dart';
+import 'package:sos360_app/screens/emergency_call/call_confirmation_page.dart';
 
 class PoliceServicePage extends StatelessWidget {
   const PoliceServicePage({super.key});
