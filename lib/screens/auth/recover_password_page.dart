@@ -3,7 +3,6 @@ import 'package:sos360_app/components/my_button.dart';
 import 'package:sos360_app/components/my_text_field.dart';
 
 class RecoverPasswordPage extends StatelessWidget {
-
   final emailController = TextEditingController();
 
   RecoverPasswordPage({super.key});

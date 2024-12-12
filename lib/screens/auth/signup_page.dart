@@ -16,7 +16,7 @@ class SignupPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Center(
+          child: Center(
         child: ListView(
           scrollDirection: Axis.vertical,
           children: [

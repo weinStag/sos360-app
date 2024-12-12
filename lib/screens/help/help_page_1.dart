@@ -25,10 +25,7 @@ class HelpPage1 extends StatelessWidget {
               "O SOS 360 foi desenvolvido para facilitar o acionamento de serviços de emergência.",
               textAlign: TextAlign.center,
             ),
-            OptionCard(
-              option: "SAMU",
-              icon: "assets/ambulance.png"
-            ),
+            OptionCard(option: "SAMU", icon: "assets/ambulance.png"),
             Text(
               "Para acionar um serviço, clique no botão correspondente ao serviço desejado e especifique o tipo da ocorrência.",
               textAlign: TextAlign.center,

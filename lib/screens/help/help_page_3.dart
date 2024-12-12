@@ -21,7 +21,9 @@ class HelpPage3 extends StatelessWidget {
               const SizedBox(height: 50),
               const Padding(
                 padding: EdgeInsets.all(8.0),
-                child: Text("Pronto! O serviço estará a caminho do local da emergência.",),
+                child: Text(
+                  "Pronto! O serviço estará a caminho do local da emergência.",
+                ),
               )
             ],
           ),

@@ -14,11 +14,14 @@ class HelpPage2 extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text("Certifique-se de conferir os seus dados pessoais e os dados do chamado antes de finalizar."),
+              const Text(
+                  "Certifique-se de conferir os seus dados pessoais e os dados do chamado antes de finalizar."),
               const SizedBox(height: 50),
-              Lottie.network("https://lottie.host/eadc6cc7-c7be-4edc-aa51-ff9cbe848314/VFFzb5j8aR.json"),
+              Lottie.network(
+                  "https://lottie.host/eadc6cc7-c7be-4edc-aa51-ff9cbe848314/VFFzb5j8aR.json"),
               const SizedBox(height: 50),
-              const Text("São essas informações que serão usadas para encontrar você no momento do atendimento."),
+              const Text(
+                  "São essas informações que serão usadas para encontrar você no momento do atendimento."),
             ],
           ),
         ),

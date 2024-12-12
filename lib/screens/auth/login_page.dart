@@ -16,82 +16,79 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-          child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Image.asset("assets/logo.png"),
-            Column(
-              children: [
-                MyTextField(
-                  controller: usernameController,
-                  hintText: "john@doe.com",
-                  obscureText: false,
-                ),
-                const SizedBox(height: 10),
-                MyTextField(
-                  controller: passwordController,
-                  hintText: "Senha",
-                  obscureText: true,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      TextButton(
-                        child: Text(
-                          "Esqueci minha senha",
-                          style: TextStyle(color: Colors.grey.shade600),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => RecoverPasswordPage(),
-                            )
-                          );
-                        },
-                      ),
-                    ],
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Image.asset("assets/logo.png"),
+              Column(
+                children: [
+                  MyTextField(
+                    controller: usernameController,
+                    hintText: "john@doe.com",
+                    obscureText: false,
                   ),
-                )
-              ],
-            ),
-            MyButton(
-                color: Colors.red.shade800,                
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomePage()));
-                },
-                icon: const Icon(Icons.login)
+                  const SizedBox(height: 10),
+                  MyTextField(
+                    controller: passwordController,
+                    hintText: "Senha",
+                    obscureText: true,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        TextButton(
+                          child: Text(
+                            "Esqueci minha senha",
+                            style: TextStyle(color: Colors.grey.shade600),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RecoverPasswordPage(),
+                                ));
+                          },
+                        ),
+                      ],
+                    ),
+                  )
+                ],
               ),
-            Row(
-              children: [
-                const Expanded(child: Divider(thickness: 0.5)),
-                TextButton(
+              MyButton(
+                  color: Colors.red.shade800,
                   onPressed: () {
                     Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => SignupPage())
-                    );
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()));
                   },
-                  child: const Row(
-                    children: [
-                      Icon(Icons.person_add),
-                      Text(" ou cadastre-se"),
-                    ],
+                  icon: const Icon(Icons.login)),
+              Row(
+                children: [
+                  const Expanded(child: Divider(thickness: 0.5)),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SignupPage()));
+                    },
+                    child: const Row(
+                      children: [
+                        Icon(Icons.person_add),
+                        Text(" ou cadastre-se"),
+                      ],
+                    ),
                   ),
-                ),
-                const Expanded(child: Divider(thickness: 0.5)),
-              ],
-            )
-          ],
+                  const Expanded(child: Divider(thickness: 0.5)),
+                ],
+              )
+            ],
+          ),
         ),
-      ),
       ),
     );
   }

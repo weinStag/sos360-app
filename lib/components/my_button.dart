@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-
   final color;
   final onPressed;
   final icon;

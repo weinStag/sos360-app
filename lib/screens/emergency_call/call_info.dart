@@ -46,7 +46,9 @@ class CallInfo extends StatelessWidget {
           ),
           Text("data: 12/12/2024"),
           Text("hora: 12:00"),
-          SizedBox(height: 30,),
+          SizedBox(
+            height: 30,
+          ),
           Text(
             "Descrição do chamado:",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),

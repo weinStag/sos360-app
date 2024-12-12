@@ -56,10 +56,9 @@ class NotificationsPage extends StatelessWidget {
                   Text(
                     'Histórico',
                     style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black.withOpacity(0.9)
-                    ),
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black.withOpacity(0.9)),
                   ),
                 ],
               ),
@@ -70,10 +69,9 @@ class NotificationsPage extends StatelessWidget {
                     return ListTile(
                       onTap: () {
                         Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                    CallInfo()));
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CallInfo()));
                       },
                       contentPadding: const EdgeInsets.all(10.0),
                       title: Text('Chamado $index'),
