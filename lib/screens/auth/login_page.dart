@@ -17,18 +17,22 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          child: ListView(
             children: [
-              Image.asset("assets/logo.png"),
+              Image.asset(
+                "assets/logo.png",
+                height: 200,
+              ),
+              SizedBox(height: 40),
               Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   MyTextField(
                     controller: usernameController,
-                    hintText: "john@doe.com",
+                    hintText: "Email",
                     obscureText: false,
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 20),
                   MyTextField(
                     controller: passwordController,
                     hintText: "Senha",
@@ -57,6 +61,7 @@ class LoginPage extends StatelessWidget {
                   )
                 ],
               ),
+              const SizedBox(height: 60),
               MyButton(
                   color: Colors.red.shade800,
                   onPressed: () {
@@ -66,21 +71,31 @@ class LoginPage extends StatelessWidget {
                             builder: (context) => const HomePage()));
                   },
                   icon: const Icon(Icons.login)),
+              const SizedBox(height: 80),
               Row(
                 children: [
                   const Expanded(child: Divider(thickness: 0.5)),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => SignupPage()));
-                    },
-                    child: const Row(
-                      children: [
-                        Icon(Icons.person_add),
-                        Text(" ou cadastre-se"),
-                      ],
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      border: Border.all(
+                        color: Colors.grey,
+                        width: 0.5,
+                      ),
+                    ),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SignupPage()));
+                      },
+                      child: const Row(
+                        children: [
+                          Text("ou cadastre-se "),
+                          Icon(Icons.person_add),
+                        ],
+                      ),
                     ),
                   ),
                   const Expanded(child: Divider(thickness: 0.5)),
