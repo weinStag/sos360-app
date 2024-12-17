@@ -23,6 +23,10 @@ class HelpPage3 extends StatelessWidget {
                 padding: EdgeInsets.all(8.0),
                 child: Text(
                   "Pronto! O serviço estará a caminho do local da emergência.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
                 ),
               )
             ],
