@@ -29,6 +29,6 @@ class MyTextField extends StatelessWidget {
           hintStyle: TextStyle(color: Theme.of(context).hintColor),
         ),
       ),
-      );
+    );
   }
 }

@@ -29,13 +29,11 @@ class OptionCard extends StatelessWidget {
                   height: 70,
                 ),
               ),
-              SizedBox(width: 20),
+              const SizedBox(width: 20),
               Text(
                 option,
                 style: const TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w600
-                ),
+                    fontSize: 30.0, fontWeight: FontWeight.w600),
               ),
             ],
           ),

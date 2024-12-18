@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:linear_progress_bar/linear_progress_bar.dart';
 import 'package:sos360_app/components/option_card.dart';
-import 'package:sos360_app/pages/call_confirmation_page.dart';
+import 'package:sos360_app/screens/emergency_call/call_confirmation_page.dart';
 
 class PoliceServicePage extends StatelessWidget {
   const PoliceServicePage({super.key});
@@ -19,7 +19,7 @@ class PoliceServicePage extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset(
-                    "assets/police.png",
+                    "assets/emergencies/police.png",
                     height: 100,
                   ),
                   LinearProgressBar(
@@ -51,7 +51,7 @@ class PoliceServicePage extends StatelessWidget {
                 ),
                 child: ListView(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     GestureDetector(
@@ -59,23 +59,23 @@ class PoliceServicePage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => CallConfirmationPage())),
+                                builder: (context) => const CallConfirmationPage())),
                       },
-                      child: OptionCard(
-                        icon: "assets/police.png",
+                      child: const OptionCard(
+                        icon: "assets/emergencies/police.png",
                         option: "Assalto",
                       ),
                     ),
-                    OptionCard(
-                      icon: "assets/police.png",
+                    const OptionCard(
+                      icon: "assets/emergencies/police.png",
                       option: "Furto",
                     ),
-                    OptionCard(
-                      icon: "assets/police.png",
+                    const OptionCard(
+                      icon: "assets/emergencies/police.png",
                       option: "Roubo",
                     ),
-                    OptionCard(
-                      icon: "assets/police.png",
+                    const OptionCard(
+                      icon: "assets/emergencies/police.png",
                       option: "Sequestro",
                     ),
                   ],

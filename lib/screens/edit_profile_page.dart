@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sos360_app/components/my_text_field.dart';
 
 class EditProfilePage extends StatelessWidget {
-
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
@@ -49,10 +48,7 @@ class EditProfilePage extends StatelessWidget {
               const SizedBox(height: 20),
               Column(
                 children: [
-                  const Icon(
-                    Icons.person,
-                    size: 150
-                  ),
+                  const Icon(Icons.person, size: 150),
                   const SizedBox(height: 50),
                   MyTextField(
                     controller: nameController,

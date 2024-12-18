@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:sos360_app/components/option_card.dart';
-import 'package:sos360_app/pages/notifications_page.dart';
-import 'package:sos360_app/pages/service_pages/firemen_service_page.dart';
-import 'package:sos360_app/pages/service_pages/police_service_page.dart';
-import 'package:sos360_app/pages/service_pages/samu_service_page.dart';
+import 'package:sos360_app/screens/notifications_page.dart';
+import 'package:sos360_app/screens/emergency_call/firemen_service_page.dart';
+import 'package:sos360_app/screens/emergency_call/police_service_page.dart';
+import 'package:sos360_app/screens/emergency_call/samu_service_page.dart';
+import 'package:sos360_app/screens/settings_page.dart';
 
 class CallServicePage extends StatelessWidget {
   const CallServicePage({super.key});
@@ -13,7 +13,7 @@ class CallServicePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.red.shade600,
+        backgroundColor: Colors.red.shade600,q
         body: SafeArea(
           child: Center(
             child: Column(
@@ -43,10 +43,10 @@ class CallServicePage extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const NotificationsPage()));
+                                            const SettingsPage()));
                               },
                               icon: const Icon(
-                                Icons.notifications,
+                                Icons.settings,
                                 color: Colors.white,
                                 size: 40,
                               )),
@@ -58,6 +58,7 @@ class CallServicePage extends StatelessWidget {
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white),
                         borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(40),
                             topRight: Radius.circular(40)),
@@ -86,40 +87,42 @@ class CallServicePage extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            PoliceServicePage()));
-                              },
-                              child: OptionCard(
-                                  option: "Polícia", icon: "assets/police.png"),
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            FiremenServicePage()));
-                              },
-                              child: OptionCard(
-                                  option: "Bombeiros",
-                                  icon: "assets/firemen.png"),
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            SamuServicePage()));
+                                            const PoliceServicePage()));
                               },
                               child: const OptionCard(
-                                  option: "SAMU", icon: "assets/ambulance.png"),
+                                  option: "Polícia",
+                                  icon: "assets/emergencies/police.png"),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const FiremenServicePage()));
+                              },
+                              child: const OptionCard(
+                                  option: "Bombeiros",
+                                  icon: "assets/emergencies/firemen.png"),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const SamuServicePage()));
+                              },
+                              child: const OptionCard(
+                                  option: "SAMU",
+                                  icon: "assets/emergencies/ambulance.png"),
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         ),
-                        Text("SOS360 - 2024"),
+                        const Text("SOS360 - 2024"),
                       ],
                     ),
                   ),

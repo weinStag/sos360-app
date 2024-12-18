@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sos360_app/pages/service_pages/call_info.dart';
+import 'package:sos360_app/screens/emergency_call/call_info.dart';
 
 class NotificationsPage extends StatelessWidget {
   const NotificationsPage({super.key});
@@ -7,19 +7,19 @@ class NotificationsPage extends StatelessWidget {
   Image currentService(int index) {
     if (index % 2 == 0) {
       return Image.asset(
-        'assets/police.png',
+        'assets/emergencies/police.png',
         width: 50,
         height: 50,
       );
     } else if (index % 3 == 0) {
       return Image.asset(
-        'assets/ambulance.png',
+        'assets/emergencies/ambulance.png',
         width: 50,
         height: 50,
       );
     } else {
       return Image.asset(
-        'assets/firemen.png',
+        'assets/emergencies/firemen.png',
         width: 50,
         height: 50,
       );
@@ -29,6 +29,7 @@ class NotificationsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: SafeArea(
           child: Column(
@@ -56,13 +57,13 @@ class NotificationsPage extends StatelessWidget {
                   Text(
                     'Histórico',
                     style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black.withOpacity(0.9)
-                    ),
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black.withOpacity(0.9)),
                   ),
                 ],
               ),
+              const SizedBox(height: 20,),
               Expanded(
                 child: ListView.builder(
                   itemCount: 10,
@@ -70,10 +71,9 @@ class NotificationsPage extends StatelessWidget {
                     return ListTile(
                       onTap: () {
                         Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                    CallInfo()));
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CallInfo()));
                       },
                       contentPadding: const EdgeInsets.all(10.0),
                       title: Text('Chamado $index'),
