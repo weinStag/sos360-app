@@ -18,7 +18,7 @@ class FiremenServicePage extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset(
-                    "assets/firemen.png",
+                    "assets/emergencies/firemen.png",
                     height: 100,
                   ),
                   LinearProgressBar(
@@ -36,7 +36,7 @@ class FiremenServicePage extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
                   ),
@@ -44,7 +44,7 @@ class FiremenServicePage extends StatelessWidget {
                     BoxShadow(
                       color: Colors.black.withOpacity(0.7),
                       blurRadius: 5,
-                      offset: Offset(0, -3),
+                      offset: const Offset(0, -3),
                     ),
                   ],
                 ),
@@ -54,19 +54,19 @@ class FiremenServicePage extends StatelessWidget {
                       height: 30,
                     ),
                     OptionCard(
-                      icon: "assets/firemen.png",
+                      icon: "assets/emergencies/firemen.png",
                       option: "Incêndio",
                     ),
                     OptionCard(
-                      icon: "assets/firemen.png",
+                      icon: "assets/emergencies/firemen.png",
                       option: "Acidente",
                     ),
                     OptionCard(
-                      icon: "assets/firemen.png",
+                      icon: "assets/emergencies/firemen.png",
                       option: "Produto Químico",
                     ),
                     OptionCard(
-                      icon: "assets/firemen.png",
+                      icon: "assets/emergencies/firemen.png",
                       option: "Difícil acesso",
                     ),
                   ],

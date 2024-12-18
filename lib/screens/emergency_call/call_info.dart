@@ -40,22 +40,22 @@ class CallInfo extends StatelessWidget {
             ],
           ),
           Image.asset(
-            'assets/police.png',
+            'assets/emergencies/police.png',
             width: 50,
             height: 50,
           ),
-          Text("data: 12/12/2024"),
-          Text("hora: 12:00"),
-          SizedBox(
+          const Text("data: 12/12/2024"),
+          const Text("hora: 12:00"),
+          const SizedBox(
             height: 30,
           ),
-          Text(
+          const Text(
             "Descrição do chamado:",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
           ),
-          Padding(
+          const Padding(
             padding:
-                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+                EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
             child: Text(
               "Chamado para atender uma ocorrência de roubo",
               style: TextStyle(fontSize: 20),

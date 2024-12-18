@@ -23,7 +23,7 @@ class LoginPage extends StatelessWidget {
                 "assets/logo.png",
                 height: 200,
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [

@@ -7,19 +7,19 @@ class NotificationsPage extends StatelessWidget {
   Image currentService(int index) {
     if (index % 2 == 0) {
       return Image.asset(
-        'assets/police.png',
+        'assets/emergencies/police.png',
         width: 50,
         height: 50,
       );
     } else if (index % 3 == 0) {
       return Image.asset(
-        'assets/ambulance.png',
+        'assets/emergencies/ambulance.png',
         width: 50,
         height: 50,
       );
     } else {
       return Image.asset(
-        'assets/firemen.png',
+        'assets/emergencies/firemen.png',
         width: 50,
         height: 50,
       );
@@ -29,6 +29,7 @@ class NotificationsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: SafeArea(
           child: Column(
@@ -62,6 +63,7 @@ class NotificationsPage extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 20,),
               Expanded(
                 child: ListView.builder(
                   itemCount: 10,
@@ -71,7 +73,7 @@ class NotificationsPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => CallInfo()));
+                                builder: (context) => const CallInfo()));
                       },
                       contentPadding: const EdgeInsets.all(10.0),
                       title: Text('Chamado $index'),

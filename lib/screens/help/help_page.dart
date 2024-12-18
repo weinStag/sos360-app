@@ -34,7 +34,7 @@ class _HelpPageState extends State<HelpPage> {
                   curve: Curves.easeInOut,
                 );
               },
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back,
                 color: Colors.black45,
               ),
@@ -53,7 +53,7 @@ class _HelpPageState extends State<HelpPage> {
                   curve: Curves.easeInOut,
                 );
               },
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_forward,
                 color: Colors.black45,
               ),

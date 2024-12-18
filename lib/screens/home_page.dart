@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:sos360_app/screens/emergency_call/call_service_page.dart';
 import 'package:sos360_app/screens/help/help_page.dart';
-import 'package:sos360_app/screens/settings_page.dart';
+import 'package:sos360_app/screens/notifications_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -35,37 +35,38 @@ class _HomePageState extends State<HomePage> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
               child: GNav(
-                  backgroundColor: Colors.transparent,
-                  color: Colors.black45,
-                  iconSize: 30,
-                  tabBackgroundColor: Colors.blue.shade300,
-                  padding: const EdgeInsets.all(10),
-                  gap: 10,
-                  selectedIndex: selectedBarIndex,
-                  onTabChange: (newIndex) {
-                    setState(() {
-                      selectedBarIndex = newIndex;
-                    });
-                  },
-                  tabs: const [
-                    GButton(
-                      icon: Icons.settings,
-                      text: "Opções",
-                    ),
-                    GButton(
-                      icon: Icons.phone,
-                      text: "Chamar",
-                    ),
-                    GButton(
-                      icon: Icons.help_outline,
-                      text: "Ajuda",
-                    ),
-                  ]),
+                backgroundColor: Colors.transparent,
+                color: Colors.black45,
+                iconSize: 30,
+                tabBackgroundColor: Colors.blue.shade300,
+                padding: const EdgeInsets.all(10),
+                gap: 10,
+                selectedIndex: selectedBarIndex,
+                onTabChange: (newIndex) {
+                  setState(() {
+                    selectedBarIndex = newIndex;
+                  });
+                },
+                tabs: const [
+                  GButton(
+                    icon: Icons.history,
+                    text: "Histórico",
+                  ),
+                  GButton(
+                    icon: Icons.phone,
+                    text: "Chamar",
+                  ),
+                  GButton(
+                    icon: Icons.help_outline,
+                    text: "Ajuda",
+                  ),
+                ],
+              ),
             ),
           ),
         ),
         body: switch (selectedBarIndex) {
-          0 => const SettingsPage(),
+          0 => const NotificationsPage(),
           2 => const HelpPage(),
           int() => const CallServicePage(),
         });

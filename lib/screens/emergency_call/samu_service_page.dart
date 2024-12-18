@@ -18,7 +18,7 @@ class SamuServicePage extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset(
-                    "assets/ambulance.png",
+                    "assets/emergencies/ambulance.png",
                     height: 100,
                   ),
                   LinearProgressBar(
@@ -36,7 +36,7 @@ class SamuServicePage extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
                   ),
@@ -44,7 +44,7 @@ class SamuServicePage extends StatelessWidget {
                     BoxShadow(
                       color: Colors.black.withOpacity(0.7),
                       blurRadius: 5,
-                      offset: Offset(0, -3),
+                      offset: const Offset(0, -3),
                     ),
                   ],
                 ),
@@ -54,19 +54,19 @@ class SamuServicePage extends StatelessWidget {
                       height: 30,
                     ),
                     OptionCard(
-                      icon: "assets/ambulance.png",
+                      icon: "assets/emergencies/ambulance.png",
                       option: "Desmaio",
                     ),
                     OptionCard(
-                      icon: "assets/ambulance.png",
+                      icon: "assets/emergencies/ambulance.png",
                       option: "Engasgamento",
                     ),
                     OptionCard(
-                      icon: "assets/ambulance.png",
+                      icon: "assets/emergencies/ambulance.png",
                       option: "Parto",
                     ),
                     OptionCard(
-                      icon: "assets/ambulance.png",
+                      icon: "assets/emergencies/ambulance.png",
                       option: "Convulsão",
                     ),
                   ],

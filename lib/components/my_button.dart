@@ -14,16 +14,24 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(15.0),
-      ),
-      child: IconButton(
-        onPressed: onPressed,
-        color: Colors.white,
-        icon: icon,
-        iconSize: 60,
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Container(
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            IconButton(
+              onPressed: onPressed,
+              color: Colors.white,
+              icon: icon,
+              iconSize: 35,
+            ),
+          ],
+        ),
       ),
     );
   }
