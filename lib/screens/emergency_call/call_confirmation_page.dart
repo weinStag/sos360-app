@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sos360_app/components/my_button.dart';
 
-class CallInfo extends StatelessWidget {
-  const CallInfo({super.key});
+class CallConfirmationPage extends StatelessWidget {
+  const CallConfirmationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class CallInfo extends StatelessWidget {
                 ),
               ),
               Text(
-                "Informações da Chamada",
+                "Confirmar Chamado",
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
@@ -40,25 +41,37 @@ class CallInfo extends StatelessWidget {
             ],
           ),
           Image.asset(
-            'assets/police.png',
+            'assets/emergencies/police.png',
             width: 50,
             height: 50,
           ),
-          Text("data: 12/12/2024"),
-          Text("hora: 12:00"),
-          SizedBox(height: 30,),
-          Text(
+          const Text("data: 12/12/2024"),
+          const Text("hora: 12:00"),
+          const SizedBox(
+            height: 30,
+          ),
+          const Text(
             "Descrição do chamado:",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
           ),
-          Padding(
+          const Padding(
             padding:
-                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+                EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
             child: Text(
               "Chamado para atender uma ocorrência de roubo",
-              style: TextStyle(fontSize: 20),
+              textAlign: TextAlign.justify,
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
           ),
+          MyButton(
+              color: Colors.blue.shade600,
+              onPressed: () {
+                Navigator.pop(context);
+                Navigator.pop(context);
+              },
+              icon: const Icon(Icons.call)),
         ],
       )),
     );

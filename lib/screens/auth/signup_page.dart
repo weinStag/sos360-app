@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sos360_app/components/my_button.dart';
 import 'package:sos360_app/components/my_text_field.dart';
-import 'package:sos360_app/pages/home_page.dart';
+import 'package:sos360_app/screens/home_page.dart';
 
 class SignupPage extends StatelessWidget {
   SignupPage({super.key});
@@ -10,13 +10,16 @@ class SignupPage extends StatelessWidget {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final secondPasswordController = TextEditingController();
+  final cpfController = TextEditingController();
+  final phoneController = TextEditingController();
+  final addressController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Center(
+          child: Center(
         child: ListView(
           scrollDirection: Axis.vertical,
           children: [
@@ -26,13 +29,13 @@ class SignupPage extends StatelessWidget {
               children: [
                 MyTextField(
                   controller: usernameController,
-                  hintText: "Pessoa da Silva",
+                  hintText: "Nome Completo",
                   obscureText: false,
                 ),
                 const SizedBox(height: 20),
                 MyTextField(
                   controller: emailController,
-                  hintText: "pessoa@dasilva.com",
+                  hintText: "Email",
                   obscureText: false,
                 ),
                 const SizedBox(height: 20),
@@ -46,6 +49,24 @@ class SignupPage extends StatelessWidget {
                   controller: secondPasswordController,
                   hintText: "Confirmação de senha",
                   obscureText: true,
+                ),
+                const SizedBox(height: 20),
+                MyTextField(
+                  controller: cpfController,
+                  hintText: "CPF",
+                  obscureText: false,
+                ),
+                const SizedBox(height: 20),
+                MyTextField(
+                  controller: phoneController,
+                  hintText: "Telefone",
+                  obscureText: false,
+                ),
+                const SizedBox(height: 20),
+                MyTextField(
+                  controller: addressController,
+                  hintText: "Endereço",
+                  obscureText: false,
                 ),
                 const SizedBox(height: 60),
                 MyButton(
