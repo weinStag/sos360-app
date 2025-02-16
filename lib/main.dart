@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sos360_app/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: const Scaffold(),
     );
   }
 }
