@@ -11,8 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  intl: ^0.17.0
+  curved_labeled_navigation_bar: ^2.0.6
   smooth_page_indicator: ^1.0.0
-  google_nav_bar: ^5.0.7
   lottie: ^3.0.0
   linear_progress_bar: ^1.1.2
 
