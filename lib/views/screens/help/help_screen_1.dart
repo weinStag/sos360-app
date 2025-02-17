@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sos360_app/views/widgets/sos_card.dart';
 
 class HelpScreen1 extends StatelessWidget {
   const HelpScreen1({super.key});
@@ -28,7 +29,7 @@ class HelpScreen1 extends StatelessWidget {
                 fontSize: 20,
               ),
             ),
-            SizedBox(height: 20),
+            SosCard(imagePath: "assets/emergencies/ambulance.png", text: Icon(Icons.arrow_forward, size: 30)),
             Text(
               "Para acionar um serviço, clique no botão correspondente ao serviço desejado e especifique o tipo da ocorrência.",
               textAlign: TextAlign.center,
